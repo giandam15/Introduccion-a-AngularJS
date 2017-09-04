@@ -1,0 +1,12 @@
+<html ng-app>
+	<body>
+		<div ng-init="datos=['Manuel', 'Oliveira', 'jose','maria','rosa','sara']">
+			<h1 align="center">Datos del Cliente</h1>
+				Nombre por el cual desea filtrar:<input type="text" ng-model="nombre"/>
+			<ul>
+				<li ng-repeat="dato in datos | filter:nombre">{{ dato | uppercase}}</li>
+			</ul>
+		</div>
+		<script src="angular.min.js"></script>
+	</body>
+</html>
